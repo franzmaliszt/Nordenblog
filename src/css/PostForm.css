@@ -1,0 +1,84 @@
+.formDiv {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.form__title {
+    width: 100%;
+    margin: 6px 0px;
+}
+
+.form__context {
+    width: 100%;
+    height: 40%;
+    min-height: 20%;
+    max-width: 100%;
+    min-width: 100%;
+    margin: 6px 0px;
+}
+
+.form__tag {
+    display: flex;
+    align-items: center;
+    width: 15%;
+    margin: 6px 0px;
+}
+
+.form__submit {
+    display: block;
+    width: 90px;
+    height: 40px;
+    margin: 6px 0px;
+    margin-left: 87%;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 12px;
+    border: none;
+    color: white;
+    background-color: var(--tertiary-color);
+    transition: background-color 200ms ease-out;
+}
+
+.form__submit:hover {
+    background-color: #42ad8a;
+    border-radius: 16px;
+    transition: background-color 200ms ease-out;
+}
+
+.form__tagList {
+    display: flex;
+    flex-direction: row;
+}
+
+.form__option {
+    background-color: var(--tertiary-color);
+    border-radius: 4px;
+    margin-right: 4px;
+    height: 25px;
+    min-width: 20px;
+    padding: 8px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+}
+
+.form__option.selected {
+    background-color: var(--secondary-color);
+}
+
+.form__option:hover {
+    background-color: var(--secondary-color);
+    border-radius: 4px;
+    margin-right: 4px;
+}
