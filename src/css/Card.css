@@ -1,0 +1,47 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    color: #ffffff;
+    background-image: linear-gradient(to right, var(--secondary-color) , #353A41);
+    border-bottom: 1px solid gray;
+    padding: 8px 10px;
+}
+
+.card__title {
+    flex: 0.9;
+    text-align: left;
+    overflow: hidden;
+    font-size: 90%;
+    margin-left: 10px;
+}
+
+.card__time {
+    flex: 0.1;
+    text-align: right;
+    font-size: 9px;
+    margin-left: 4px;
+}
+
+.card__context {
+    display:none
+}
+
+.card.active {
+    background-image: linear-gradient(to right, var(--tertiary-color), var(--tertiary-color));
+    color: white;
+}
+
+.card:hover {
+    background-image: linear-gradient(to right, var(--secondary-color) , #505763);
+    color: #ffffff;
+    transition: color 100ms ease-out;
+    transition: background-image 1000ms ease-in;
+    cursor: pointer;
+}
+
+.card:hover.active {
+    background-image: linear-gradient(to right, var(--tertiary-color), var(--tertiary-color));
+}

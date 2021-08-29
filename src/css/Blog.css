@@ -1,0 +1,30 @@
+.blog {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    height: 90vh;
+    padding: 8%;
+    color: black;
+}
+
+.blog__title {
+    display: block;;
+    font-size: 80px;
+    text-align: center;
+    flex: 0.8;
+}
+
+.blog__time {
+    display: flex;
+    flex: 0.2;
+}
+
+.blog__context {
+    display: flex;
+    margin-top: 60px;
+    flex: 1;
+    font-size: 18px;
+    font-weight: 100;
+    text-align: justify;
+    text-justify: inter-word;
+}
