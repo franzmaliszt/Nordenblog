@@ -3,7 +3,8 @@ import { PostContext } from '../context/PostContext';
 import { WalletContext } from '../context/WalletContext';
 import { ThemeContext } from '../context/ThemeContext';
 
-// import WhatshotIcon from '@material-ui/icons/Whatshot';
+import WhatshotIcon from '@material-ui/icons/Whatshot';
+// import LocalActivityIcon from '@material-ui/icons/LocalActivity';
 import FlareIcon from '@material-ui/icons/Flare';
 import LanguageIcon from '@material-ui/icons/Language';
 import ExploreIcon from '@material-ui/icons/Explore';
@@ -21,9 +22,9 @@ import '../css/TagBar.css';
 function TagBar() {
 
     const [appState, setAppState] = useState({
-        activeObject: { tag: 'World' },
+        activeObject: { tag: 'New' },
         objects: [ 
-            // { active: 'active', tag: 'Hot', Icon: WhatshotIcon }, 
+            { tag: 'Featured', Icon: WhatshotIcon },
             { active: 'active', tag: 'New', Icon: FlareIcon },
             { tag: 'World', Icon: LanguageIcon },
             { tag: 'Travel', Icon: ExploreIcon },
@@ -32,6 +33,7 @@ function TagBar() {
             { tag: 'Finance', Icon: AccountBalanceIcon},
             { tag: 'Eco', Icon: EcoIcon},
             { tag: 'Academic', Icon: SchoolIcon}
+            // { tag: 'Featured', Icon: LocalActivityIcon}, 
         ]
     });
 

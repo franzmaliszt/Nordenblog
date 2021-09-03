@@ -13,7 +13,7 @@ function Feed() {
     return (           
         <div className='feed'>
             {posts.activeObject === 'Home' ? 
-                <Home></Home> 
+                <Home/>
             : 
                 <Blog className='blog' title={active.title} context={active.context} time={active.time}/>}            
         </div>

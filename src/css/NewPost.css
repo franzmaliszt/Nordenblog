@@ -1,47 +1,107 @@
 .popup {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgb(0, 0, 0, 0.5);
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: calc(100vw - 40px);
+    height: 90vh;
+    background-color: rgb(0, 0, 0, 0.6);
 }
 
 .popup__inner {
-    position: relative;
-    padding: 32px;
-    width: 100%;
-    height: 40%;
-    max-width: 640px;
-    top: 5%;
-    left: 17%;
-    background-color: #f4f4f4;
-    color: red;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    height: 65%;
+    max-width: 75%;
+    margin-left: 10%;
+    padding: 24px;
+    background-color: #f4f4f4;
+    color: red;
+    border-radius: 30px;
     box-shadow: 5px 5px 3px #303030;
 }
 
-.closeBtn {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    padding: 2px;
-    cursor: pointer;
+.side_options {
+    display: flex;
+    height: 65%;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.option {
+    display: flex;
+    bottom: 20%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 4px;
+    margin: 2px 0px;
+    width: 28px;
+    height: 40px;
+    color: var(--primary-color);
+    background-image: radial-gradient(circle, #5df3c1, var(--tertiary-color), #5df3c1);
+    transition: background-image 300ms ease-in;
+    border-radius: 0px 14px 14px 0px;
+    transition: border-radius 300ms ease-out;
+    transition: width 200ms ease-out;
+}
+
+.featureIcon {
+    display: inline-block;
+    font-size: 24px !important;
+    color: gray;
+}
+
+.featureIcon.active {
+    color: red;
+}
+
+.option:hover {
+    width: 100px;
+    font-size:12px;
     border: none;
-    border-radius: 4px;
+    border-radius: 0px 4px 4px 0px;
+    box-shadow: none;
+    cursor: pointer;
+    color: var(--primary-color);
+    background-image: linear-gradient(to right, var(--tertiary-color), lightgreen);
+    cursor: pointer;
+}
+
+.option__text {
+    display: none;
+}
+
+.option:hover > .option__text {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 14px;    
+    cursor: pointer;
+}
+
+.closeBtn {
+    position: relative;
+    width: 80px;
+    top: -50px;
+    padding: 2px;
+    margin-right: 4px;
+    font-size: 18px;
+    font-weight: 100;
+    border-radius: 12px 12px 0px 0px;
+    border: none;
     color: white;
     background-color: var(--tertiary-color);
     transition: background-color 200ms ease-out;
+    transition: border-radius 200ms ease-out;
+    cursor: pointer;
 }
 
 .closeBtn:hover {
     background-color: #42ad8a;
     transition: background-color 200ms ease-out;
+    border-radius: 4px 4px 0px 0px;
 }

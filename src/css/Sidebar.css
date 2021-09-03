@@ -71,4 +71,6 @@
 .newPost:hover > .newPost__text {
     display: inline-block;
     white-space: nowrap;
+    font-size: 16px;
+    cursor: pointer;
 }

@@ -7,7 +7,18 @@ export const PostProvider = (props) => {
     const [ posts, setPosts ] = useState({
         activeObject: 'Home',
         activeTag : 'New',
-        objects: []
+        objects: [],
+        // newBanner: null,
+        featured: false,
+        newPost: {
+            id: '',
+            faetured: false,
+            // banner: null,
+            title: '',
+            time: '',
+            tag: [],
+            context: ''
+        }
     })
 
     return (

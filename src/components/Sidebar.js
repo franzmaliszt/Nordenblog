@@ -24,10 +24,10 @@ function Sidebar() {
     
     let res = async () => {
         try {
-            let data = await GetPosts()
+            let data = await GetPosts();
             setPosts({...posts, objects: data})
-        } catch (err) {
-            console.log(err)
+        } catch (e) {
+            console.log(e)
         }
     }
 
@@ -37,6 +37,7 @@ function Sidebar() {
 
     function handleNewPost() {
         setTheme({...theme, postMode: true})
+        console.log(posts)
     }
 
     return (
@@ -56,7 +57,7 @@ function Sidebar() {
             <div className="sidebar__footer">
                 {wallet.logged ?
                     <div className='newPost' onClick={handleNewPost}>
-                        <h3 className={'newPost__text'}>New Post</h3>
+                        <label className={'newPost__text'}>New Post</label>
                         <CreateIcon className="newPost__icon"/>
                         <NewPost/>
                     </div>
